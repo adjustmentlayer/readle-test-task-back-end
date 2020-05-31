@@ -8,9 +8,10 @@
 >Additionally, if the holiday is adjacent to a weekend (so that amount of non-working days is extended), the application should print this information. I.e. the next holiday is May 1, Friday, and it’s adjacent to Saturday (May 2) and Sunday (May 3), so the application should print something like: “The next holiday is International Workers' Day, May 1, and the weekend will last 3 days: May 1 - May 3”.
 
 ### My approach
-1. check if today is a holiday
-2. determine how many days a holiday lasts
-3. determine the start and end date of the holiday
+1. if today is a longweekend, print longweekend and exit
+2. if today is a holiday, print holiday and exit
+3. if the next holiday is a longweekend, print next longweekend and exit
+4. if all above is a lie, print the next holiday
 
 
 >## Test task 2 (MySQL)
