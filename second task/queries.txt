@@ -1,4 +1,4 @@
-First query
+1) Find all current managers of each department and display his/her title, first name, last name, current salary.
 
 SELECT first_name,last_name,salary, title
 FROM employees e, dept_manager d,salaries s, titles t
@@ -9,17 +9,17 @@ AND CURDATE() BETWEEN d.from_date AND d.to_date
 AND CURDATE() BETWEEN s.from_date AND s.to_date
 AND CURDATE() BETWEEN t.from_date AND t.to_date
 
-Second query
+2) Find all employees (department, title, first name, last name, hire date, how many years they have been working) to congratulate them on their hire anniversary this month.
 
-select first_name, last_name, title, dept_name,TIMESTAMPDIFF(YEAR,e.hire_date,CURDATE()) AS experience
-from employees e, dept_emp de, departments d, titles t
+SELECT first_name, last_name, title, dept_name,TIMESTAMPDIFF(YEAR,e.hire_date,CURDATE()) AS experience
+FROM employees e, dept_emp de, departments d, titles t
 WHERE e.emp_no = de.emp_no
-and de.dept_no = d.dept_no
-and e.emp_no = t.emp_no
-and CURDATE() between de.from_date and de.to_date
-and CURDATE() between t.from_date and t.to_date
+AND de.dept_no = d.dept_no
+AND e.emp_no = t.emp_no
+AND CURDATE() BETWEEN de.from_date AND de.to_date
+AND CURDATE() BETWEEN t.from_date AND t.to_date
 
-Third query
+3) Find all departments, their current employee count, their current sum salary.
 
 select dept_name, count(de.emp_no), sum(s.salary)
 from departments d, dept_emp de, salaries s

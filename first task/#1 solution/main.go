@@ -65,7 +65,7 @@ func main() {
 		output += monthTwoDaysEarlier + " " + strconv.Itoa(twoDaysEarlier.Day()) + " - " + monthNextHoliday + " " + strconv.Itoa(nextHoliday.Day())
 	}
 	if nextHoliday.Weekday() == 6 { // Если суббота
-		output += ", і вихідні триватимуть 2 дні: "
+		output += ", і вихідні триватимуть 2 днstrconv.Itoa(і: "
 		output += monthNextHoliday + " " + strconv.Itoa(nextHoliday.Day()) + " - " + monthOneDayLater + " " + strconv.Itoa(oneDayLater.Day())
 	}
 	if nextHoliday.Weekday() == 0 { // Если воскресенье
