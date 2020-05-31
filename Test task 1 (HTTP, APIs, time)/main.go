@@ -31,8 +31,8 @@ func main() {
 	today := time.Now()
 
 	//uncomment the lines below to simulate the onset of the holiday
-	/* today, _ := time.Parse("2006-01-02", "2020-08-24") //Independence Day */
-	/* today, _ := time.Parse("2006-01-02", "2020-03-08") //International Women`s Day */
+	/* today, _ = time.Parse("2006-01-02", "2020-08-24") //Independence Day */
+	/* today, _ = time.Parse("2006-01-02", "2020-03-08") //International Women`s Day */
 
 	for _, value := range longWeekends {
 		startDate, _ := time.Parse("2006-01-02", value.StartDate)
